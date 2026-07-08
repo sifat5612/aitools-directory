@@ -286,7 +286,31 @@ margin-top:40px;
 © 2026 AI Tools Hub
 
 </footer>
+<script>
 
+const searchBox = document.querySelector(".search");
+const cards = document.querySelectorAll(".card");
+
+searchBox.addEventListener("keyup", function(){
+
+let searchText = searchBox.value.toLowerCase();
+
+cards.forEach(function(card){
+
+let cardText = card.innerText.toLowerCase();
+
+if(cardText.includes(searchText)){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
